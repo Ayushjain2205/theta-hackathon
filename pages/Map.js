@@ -84,7 +84,7 @@ const Map = () => {
     <GoogleMap
       mapContainerStyle={containerStyle}
       center={userLocation}
-      zoom={12}
+      zoom={14}
       onLoad={onLoad}
       onUnmount={onUnmount}
       options={options}
