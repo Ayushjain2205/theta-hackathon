@@ -83,7 +83,7 @@ const Map = () => {
   return isLoaded ? (
     <GoogleMap
       mapContainerStyle={containerStyle}
-      center={center}
+      center={userLocation}
       zoom={12}
       onLoad={onLoad}
       onUnmount={onUnmount}
@@ -98,6 +98,7 @@ const Map = () => {
           directions={directions}
           options={{
             suppressMarkers: true,
+            preserveViewport: true,
           }}
         />
       )}
@@ -106,7 +107,7 @@ const Map = () => {
         options={{
           destination: { lat: 12.988811268659669, lng: 77.73703548544916 },
           origin: userLocation,
-          travelMode: "DRIVING",
+          travelMode: "WALKING",
         }}
         callback={directionsCallback}
       />
