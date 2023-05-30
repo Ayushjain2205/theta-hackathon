@@ -15,6 +15,7 @@
     "@thirdweb-dev/react": "^3",
     "@thirdweb-dev/sdk": "^3",
     "ethers": "^5",
+    "feather-icons-react": "^0.6.2",
     "lodash": "^4.17.21",
     "lodash.debounce": "^4.0.8",
     "next": "^13",
