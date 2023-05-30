@@ -93,7 +93,7 @@ const Map = () => {
       <Marker position={userLocation} />
       <Marker position={{ lat: 12.988811268659669, lng: 77.73703548544916 }} />
 
-      {directions && (
+      {/* {directions && (
         <DirectionsRenderer
           directions={directions}
           options={{
@@ -110,7 +110,7 @@ const Map = () => {
           travelMode: "WALKING",
         }}
         callback={directionsCallback}
-      />
+      /> */}
     </GoogleMap>
   ) : (
     <></>
