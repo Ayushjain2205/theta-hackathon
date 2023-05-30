@@ -5,6 +5,7 @@ import {
 } from "@thirdweb-dev/react";
 import "../styles/globals.css";
 import { ThetaTestnet } from "@thirdweb-dev/chains";
+import Head from "next/head";
 
 // This is the chain your dApp will work on.
 // Change this to the chain your app is built for.
@@ -13,12 +14,20 @@ const activeChain = "ThetaTestnet";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThirdwebProvider
-      activeChain={ThetaTestnet}
-      supportedWallets={[metamaskWallet(), localWallet()]}
-    >
-      <Component {...pageProps} />
-    </ThirdwebProvider>
+    <>
+      <Head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;800&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
+      <ThirdwebProvider
+        activeChain={ThetaTestnet}
+        supportedWallets={[metamaskWallet(), localWallet()]}
+      >
+        <Component {...pageProps} />
+      </ThirdwebProvider>
+    </>
   );
 }
 
