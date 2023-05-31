@@ -1,26 +1,13 @@
 import React, { useEffect, useState } from "react";
-import {
-  GoogleMap,
-  LoadScript,
-  Marker,
-  MarkerF,
-  DirectionsService,
-  DirectionsRenderer,
-  PolylineF,
-} from "@react-google-maps/api";
+import { GoogleMap, LoadScript, Marker, MarkerF } from "@react-google-maps/api";
 import mapStyle from "../utils/mapStyle.json";
 import debounce from "lodash.debounce";
 
-const Map = () => {
+const Landing = () => {
   const containerStyle = {
     width: "100vw",
     height: "100vh",
   };
-
-  // const { isLoaded } = useJsApiLoader({
-  //   id: "google-map-script",
-  //   googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
-  // });
 
   const [map, setMap] = useState(null);
   const [center, setCenter] = useState({ lat: 0, lng: 0 });
@@ -122,38 +109,44 @@ const Map = () => {
           <GoogleMap
             mapContainerStyle={containerStyle}
             center={userLocation}
-            zoom={14}
+            zoom={16}
             onLoad={onLoad}
             onUnmount={onUnmount}
             options={options}
             onDragEnd={onMapDragEnd}
           >
-            <MarkerF position={userLocation} icon={selfMarker} />
             <MarkerF
               position={{ lat: 12.988811268659669, lng: 77.73703548544916 }}
-              icon={nftMarker}
+              icon={{ url: "marker1.png" }}
             />
-
-            <PolylineF path={path} options={polylineOptions} />
-
-            {/* {directions && (
-        <DirectionsRenderer
-          directions={directions}
-          options={{
-            suppressMarkers: true,
-            preserveViewport: true,
-          }}
-        />
-      )}
-
-      <DirectionsService
-        options={{
-          destination: { lat: 12.988811268659669, lng: 77.73703548544916 },
-          origin: userLocation,
-          travelMode: "WALKING",
-        }}
-        callback={directionsCallback}
-      /> */}
+            <MarkerF
+              position={{ lat: 12.990272394175268, lng: 77.72336841608833 }}
+              icon={{ url: "marker2.png" }}
+            />
+            <MarkerF
+              position={{ lat: 12.992467788229751, lng: 77.72305730569633 }}
+              icon={{ url: "marker3.png" }}
+            />
+            <MarkerF
+              position={{ lat: 12.990627860040751, lng: 77.71954895978364 }}
+              icon={{ url: "marker4.png" }}
+            />
+            <MarkerF
+              position={{ lat: 12.98792005100768, lng: 77.72034828593733 }}
+              icon={{ url: "marker5.png" }}
+            />
+            <MarkerF
+              position={{ lat: 12.995189580537783, lng: 77.72114005664278 }}
+              icon={{ url: "marker6.png" }}
+            />
+            <MarkerF
+              position={{ lat: 12.986412448243797, lng: 77.72702641492478 }}
+              icon={{ url: "marker7.png" }}
+            />
+            <MarkerF
+              position={{ lat: 12.98554898882198, lng: 77.71821120868368 }}
+              icon={{ url: "marker8.png" }}
+            />
           </GoogleMap>
         </LoadScript>
       </div>
@@ -161,4 +154,4 @@ const Map = () => {
   );
 };
 
-export default Map;
+export default Landing;
