@@ -16,7 +16,10 @@ const Map = () => {
   };
 
   const [map, setMap] = useState(null);
-  const [center, setCenter] = useState({ lat: 0, lng: 0 });
+  const [center, setCenter] = useState({
+    lat: 12.991631467943384,
+    lng: 77.72263884440964,
+  });
   const [userLocation, setUserLocation] = useState(null);
 
   const inputRef = useRef();
@@ -82,7 +85,7 @@ const Map = () => {
           options={options}
           onDragEnd={onMapDragEnd}
         >
-          <Marker position={center} />
+          <Marker position={(12.991547834100803, 77.72263884352493)} />
         </GoogleMap>
       </LoadScript>
     </div>
