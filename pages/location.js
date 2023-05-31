@@ -17,7 +17,7 @@ const location = () => {
         <Form.Field className="grid mb-[4px]" name="type">
           <div className="flex items-baseline justify-between">
             <Form.Label className="text-[16px] leading-[35px] text-black">
-              Let's post it at a location
+              Let&apos;s post it at a location
             </Form.Label>
           </div>
           <Form.Control asChild>
