@@ -94,7 +94,12 @@ const Map = () => {
 
   const path = [
     { lat: 12.991615786821399, lng: 77.7226173866476 },
-    { lat: 12.988811268659669, lng: 77.73703548544916 },
+    { lat: 12.990753313687742, lng: 77.72252081826636 },
+    { lat: 12.990387398864554, lng: 77.72380827701618 },
+    { lat: 12.990073754630677, lng: 77.7247309569638 },
+    { lat: 12.98931055338891, lng: 77.72629736853571 },
+    { lat: 12.988871414583535, lng: 77.72800327626025 },
+    { lat: 12.989676396318846, lng: 77.7281427741008 },
   ];
 
   const polylineOptions = {
@@ -114,6 +119,11 @@ const Map = () => {
           <img className="m-auto" src="menu.svg" alt="" />
         </div>
       </div>
+      <div className="absolute z-50 top-[16px] right-[80px] flex flex-row space-between items-center mb-[20px] bg-transparent">
+        <div className="flex flex-row h-[48px] w-[48px] border-[2px] border-black rounded-full items-center justify-between bg-white">
+          <img className="m-auto" src="camera.svg" alt="" />
+        </div>
+      </div>
       <div className="absolute">
         <LoadScript
           googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}
@@ -130,7 +140,7 @@ const Map = () => {
           >
             <MarkerF position={userLocation} icon={selfMarker} />
             <MarkerF
-              position={{ lat: 12.988811268659669, lng: 77.73703548544916 }}
+              position={{ lat: 12.989676396318846, lng: 77.7281427741008 }}
               icon={nftMarker}
             />
 
@@ -156,6 +166,29 @@ const Map = () => {
       /> */}
           </GoogleMap>
         </LoadScript>
+      </div>
+      <div className="fixed z-50 bottom-0 w-full">
+        <div className="flex flex-row p-[16px] justify-between">
+          <div className="flex flex-row items-center justify-center bg-white w-[95px] h-[48px] border-[2px] border-black rounded-[20px] gap-[14px]">
+            <img
+              className="opacity-30 transform rotate-90"
+              src="corner-down-right.svg"
+              alt=""
+            />
+            <img src="corner-down-right.svg" alt="" />
+          </div>
+          <div className="flex flex-row items-center justify-center bg-white w-[141px] h-[48px] border-[2px] border-black rounded-[20px]">
+            1km away
+          </div>
+        </div>
+        <div className=" bg-white border-[2px] border-black rounded-tl-[15px] rounded-tr-[15px] p-[24px] pb-[16px]">
+          <div className="flex flex-col gap-[10px]">
+            <div className="flex flex-row gap-[10px]">
+              <img src="location.svg" alt="" />
+              <p className="text-[22px] font-bold">Route to monastery</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
