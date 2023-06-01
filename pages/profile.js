@@ -1,4 +1,5 @@
 import React from "react";
+import ProfileMap from "../components/ProfileMap";
 
 const profile = () => {
   return (
@@ -50,6 +51,9 @@ const profile = () => {
       <div className="flex flex-row justify-around pt-[12px]">
         <img src="map.svg" alt="" />
         <img className="opacity-40" src="grid.svg" alt="" />
+      </div>
+      <div className="flex flex-row p-[16px]">
+        <ProfileMap />
       </div>
     </div>
   );
