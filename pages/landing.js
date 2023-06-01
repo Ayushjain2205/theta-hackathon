@@ -17,6 +17,7 @@ const Landing = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleFooter = () => {
+    console.log("tap");
     setIsVisible((prevVisible) => !prevVisible);
   };
 
