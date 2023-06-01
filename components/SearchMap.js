@@ -13,6 +13,7 @@ const Map = () => {
   const containerStyle = {
     width: "360px",
     height: "300px",
+    borderRadius: "10px",
   };
 
   const [map, setMap] = useState(null);
