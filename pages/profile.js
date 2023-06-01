@@ -1,5 +1,6 @@
 import React from "react";
 import ProfileMap from "../components/ProfileMap";
+import Menu from "../components/Menu";
 
 const profile = () => {
   return (
@@ -7,9 +8,8 @@ const profile = () => {
       <div className="mt-[18px] mx-[16px]">
         <div className="flex flex-row justify-between items-center mb-[20px]">
           <h5 className="text-[32px]">Your profile ...</h5>
-          <div className="flex flex-row h-[48px] w-[48px] border-[2px] border-black rounded-full items-center justify-between">
-            <img className="m-auto" src="menu.svg" alt="" />
-          </div>
+
+          <Menu />
         </div>
         <div className="flex flex-row gap-[32px] px-[28px] py-[10px] pt-0">
           <div className="flex flex-col">
