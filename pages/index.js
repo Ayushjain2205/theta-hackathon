@@ -3,7 +3,6 @@ import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
 import Link from "next/link";
 
 export default function Home() {
-  const address = useAddress();
   const [showDiv2, setShowDiv2] = useState(false);
 
   useEffect(() => {
@@ -26,13 +25,12 @@ export default function Home() {
           </p>
           <div className="flex flex-col gap-[20px]">
             <ConnectWallet />
-            {address && (
-              <Link href="landing">
-                <button className="flex flex-row gap-[8px] justify-center items-center w-[184px] h-[48px] bg-black text-white rounded-[12px]">
-                  Let's go
-                </button>
-              </Link>
-            )}
+
+            <Link href="landing">
+              <button className="flex flex-row gap-[8px] justify-center items-center w-[184px] h-[48px] bg-black text-white rounded-[12px]">
+                Let's go
+              </button>
+            </Link>
           </div>
 
           <div className="fixed bottom-0 left-[24px] py-[36px]">
