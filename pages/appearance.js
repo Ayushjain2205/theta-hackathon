@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import Menu from "../components/Menu";
+import Link from "next/link";
 
 const Appearance = () => {
   const fileInputRef = useRef(null);
@@ -48,9 +49,11 @@ const Appearance = () => {
             Upload
           </button>
         </div>
-        <button className="flex flex-row gap-[8px] justify-center items-center w-[148px] h-[48px] bg-black text-white rounded-[8px]">
-          <img src="camera-white.svg" alt="" /> Take video
-        </button>
+        <Link href="/recorder">
+          <button className="flex flex-row gap-[8px] justify-center items-center w-[148px] h-[48px] bg-black text-white rounded-[8px]">
+            <img src="camera-white.svg" alt="" /> Take video
+          </button>
+        </Link>
       </div>
     </div>
   );
