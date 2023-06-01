@@ -1,9 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Menu from "../components/Menu";
 import Link from "next/link";
 
 const Appearance = () => {
   const fileInputRef = useRef(null);
+
+  const [showImage, setShowImage] = useState(false);
 
   const handleButtonClick = () => {
     fileInputRef.current.click();
@@ -18,7 +20,10 @@ const Appearance = () => {
   return (
     <div className="mt-[18px] mx-[16px]">
       <div className="flex flex-row justify-between items-center mb-[20px]">
-        <div className="flex flex-row h-[48px] w-[48px] items-center justify-between">
+        <div
+          className="flex flex-row h-[48px] w-[48px] items-center justify-between"
+          onClick={() => setShowImage(true)}
+        >
           <img className="m-auto" src="arrow-left.svg" alt="" />
         </div>
         <Menu />
@@ -55,6 +60,17 @@ const Appearance = () => {
           </button>
         </Link>
       </div>
+      <div className="h-[279px] w-[358px] border-black rounded-[8px] border-[2px] mt-[16px]">
+        {showImage && <img src="nandi.png" alt="" />}
+      </div>
+      <Link href="preview">
+        <button className="box-border w-[358px] h-[48px] inline-flex items-center justify-center rounded-[15px] bg-[#0FA958] px-[15px] leading-none focus:outline-none mt-[30px] border-black border-[2px]">
+          Next
+        </button>
+        <button className="box-border w-[358px] h-[48px] inline-flex items-center justify-center rounded-[15px] px-[15px] leading-none focus:outline-none mt-[10px]">
+          Cancel
+        </button>
+      </Link>
     </div>
   );
 };
