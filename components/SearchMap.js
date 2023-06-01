@@ -1,15 +1,16 @@
 import React, { useEffect, useState, useRef } from "react";
 import {
   GoogleMap,
-  Marker,
   StandaloneSearchBox,
   LoadScript,
+  MarkerF,
 } from "@react-google-maps/api";
-import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 
 import mapStyle from "../utils/mapStyle.json";
 
 const Map = () => {
+  const [showMarker, setShowMarker] = useState(false);
+
   const containerStyle = {
     width: "360px",
     height: "300px",
@@ -18,20 +19,15 @@ const Map = () => {
 
   const [map, setMap] = useState(null);
   const [center, setCenter] = useState({
-    lat: 12.991631467943384,
-    lng: 77.72263884440964,
+    lat: 13.36889099276842,
+    lng: 77.68467853318361,
   });
   const [userLocation, setUserLocation] = useState(null);
 
   const inputRef = useRef();
 
   const handlePlaceChanged = () => {
-    // //const [place] = inputRef.current.getPlaces();
-    // if (place) {
-    //   console.log(place.formatted_address);
-    //   console.log(place.geometry.location.lat());
-    //   console.log(place.geometry.location.lng());
-    // }
+    setShowMarker(true);
   };
 
   const onLoad = (map) => {
@@ -86,7 +82,9 @@ const Map = () => {
           options={options}
           onDragEnd={onMapDragEnd}
         >
-          <Marker position={(12.991547834100803, 77.72263884352493)} />
+          <MarkerF
+            position={{ lat: 3.36889099276842, lng: 77.68467853318361 }}
+          />
         </GoogleMap>
       </LoadScript>
     </div>
