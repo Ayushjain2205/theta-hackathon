@@ -2,6 +2,7 @@ import {
   ThirdwebProvider,
   localWallet,
   metamaskWallet,
+  paperWallet,
 } from "@thirdweb-dev/react";
 import "../styles/globals.css";
 import { ThetaTestnet } from "@thirdweb-dev/chains";
@@ -23,7 +24,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <ThirdwebProvider
         activeChain={ThetaTestnet}
-        supportedWallets={[metamaskWallet(), localWallet()]}
+        supportedWallets={[metamaskWallet(), localWallet(), paperWallet()]}
       >
         <Component {...pageProps} />
       </ThirdwebProvider>

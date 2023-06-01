@@ -93,7 +93,7 @@ const Map = () => {
   };
 
   const nftMarker = {
-    url: "nft.png",
+    url: "marker6.png",
   };
 
   const path = [
