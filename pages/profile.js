@@ -8,7 +8,6 @@ const profile = () => {
       <div className="mt-[18px] mx-[16px]">
         <div className="flex flex-row justify-between items-center mb-[20px]">
           <h5 className="text-[32px]">Your profile ...</h5>
-
           <Menu />
         </div>
         <div className="flex flex-row gap-[32px] px-[28px] py-[10px] pt-0">

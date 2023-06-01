@@ -1,14 +1,13 @@
 import React from "react";
 import * as Form from "@radix-ui/react-form";
+import Menu from "../components/Menu";
 
 const Create = () => {
   return (
     <div className="mt-[18px] mx-[16px]">
       <div className="flex flex-row justify-between items-center mb-[20px]">
         <h5 className="text-[32px]">Create ...</h5>
-        <div className="flex flex-row h-[48px] w-[48px] border-[2px] border-black rounded-full items-center justify-between">
-          <img className="m-auto" src="menu.svg" alt="" />
-        </div>
+        <Menu />
       </div>
       <Form.Root className="w-[260px]">
         <Form.Field className="grid mb-[24px]" name="type">

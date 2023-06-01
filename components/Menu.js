@@ -11,7 +11,7 @@ const Menu = () => {
   return (
     <div className="relative">
       <div
-        className="flex flex-row h-[48px] w-[48px] border-[2px] border-black rounded-full items-center justify-between"
+        className="flex flex-row h-[48px] w-[48px] border-[2px] border-black rounded-full items-center justify-between bg-white"
         onClick={toggleDropdown}
       >
         <img className="m-auto" src="menu.svg" alt="" />

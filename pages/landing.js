@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { GoogleMap, LoadScript, Marker, MarkerF } from "@react-google-maps/api";
 import mapStyle from "../utils/mapStyle.json";
 import debounce from "lodash.debounce";
+import Menu from "../components/Menu";
 
 const Landing = () => {
   const containerStyle = {
@@ -17,7 +18,6 @@ const Landing = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleFooter = () => {
-    console.log("tap");
     setIsVisible((prevVisible) => !prevVisible);
   };
 
@@ -104,9 +104,7 @@ const Landing = () => {
         </div>
       </div>
       <div className="absolute z-50 top-[16px] right-[16px] flex flex-row space-between items-center mb-[20px] bg-transparent">
-        <div className="flex flex-row h-[48px] w-[48px] border-[2px] border-black rounded-full items-center justify-between bg-white">
-          <img className="m-auto" src="menu.svg" alt="" />
-        </div>
+        <Menu />
       </div>
       <div className="absolute">
         <LoadScript

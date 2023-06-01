@@ -1,6 +1,7 @@
 import React from "react";
 import * as Form from "@radix-ui/react-form";
 import MapWithSearchBox from "../components/SearchMap";
+import Menu from "../components/Menu";
 
 const location = () => {
   return (
@@ -9,9 +10,7 @@ const location = () => {
         <div className="flex flex-row h-[48px] w-[48px] items-center justify-between">
           <img className="m-auto" src="arrow-left.svg" alt="" />
         </div>
-        <div className="flex flex-row h-[48px] w-[48px] border-[2px] border-black rounded-full items-center justify-between">
-          <img className="m-auto" src="menu.svg" alt="" />
-        </div>
+        <Menu />
       </div>
       <Form.Root className="w-[260px]">
         <Form.Field className="grid mb-[4px]" name="type">

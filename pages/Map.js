@@ -10,6 +10,7 @@ import {
 } from "@react-google-maps/api";
 import mapStyle from "../utils/mapStyle.json";
 import debounce from "lodash.debounce";
+import Menu from "../components/Menu";
 
 const Map = () => {
   const containerStyle = {
@@ -115,9 +116,7 @@ const Map = () => {
         </div>
       </div>
       <div className="absolute z-50 top-[16px] right-[16px] flex flex-row space-between items-center mb-[20px] bg-transparent">
-        <div className="flex flex-row h-[48px] w-[48px] border-[2px] border-black rounded-full items-center justify-between bg-white">
-          <img className="m-auto" src="menu.svg" alt="" />
-        </div>
+        <Menu />
       </div>
       <div className="absolute z-50 top-[16px] right-[80px] flex flex-row space-between items-center mb-[20px] bg-transparent">
         <div className="flex flex-row h-[48px] w-[48px] border-[2px] border-black rounded-full items-center justify-between bg-white">
