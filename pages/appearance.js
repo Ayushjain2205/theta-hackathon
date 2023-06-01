@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import Menu from "../components/Menu";
 
-const appearance = () => {
+const Appearance = () => {
   const fileInputRef = useRef(null);
 
   const handleButtonClick = () => {
@@ -56,4 +56,4 @@ const appearance = () => {
   );
 };
 
-export default appearance;
+export default Appearance;
