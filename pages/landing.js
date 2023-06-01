@@ -3,11 +3,20 @@ import { GoogleMap, LoadScript, Marker, MarkerF } from "@react-google-maps/api";
 import mapStyle from "../utils/mapStyle.json";
 import debounce from "lodash.debounce";
 import Menu from "../components/Menu";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Landing = () => {
   const containerStyle = {
     width: "100vw",
     height: "100vh",
+  };
+
+  const router = useRouter();
+
+  const handleButtonClick = () => {
+    console.log("clicked");
+    router.push("/Map");
   };
 
   const [map, setMap] = useState(null);
@@ -194,7 +203,11 @@ const Landing = () => {
               </p>
             </div>
           </div>
-          <button className="box-border w-[342px] h-[48px] inline-flex items-center justify-center rounded-[15px] bg-[#0FA958] px-[15px] leading-none focus:outline-none mt-[10px] border-black border-[2px]">
+
+          <button
+            className="box-border w-[342px] h-[48px] inline-flex items-center justify-center rounded-[15px] bg-[#0FA958] px-[15px] leading-none focus:outline-none mt-[10px] border-black border-[2px]"
+            onClick={handleButtonClick}
+          >
             Grab
           </button>
         </div>
