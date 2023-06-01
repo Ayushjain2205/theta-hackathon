@@ -11,6 +11,7 @@ import {
 import mapStyle from "../utils/mapStyle.json";
 import debounce from "lodash.debounce";
 import Menu from "../components/Menu";
+import Link from "next/link";
 
 const Map = () => {
   const containerStyle = {
@@ -27,6 +28,8 @@ const Map = () => {
   const [center, setCenter] = useState({ lat: 0, lng: 0 });
   const [userLocation, setUserLocation] = useState(null);
   const [directions, setDirections] = useState(null);
+
+  const [showCamera, setShowCamera] = useState(false);
 
   useEffect(() => {
     let watchId;
@@ -111,7 +114,12 @@ const Map = () => {
   return (
     <div className="relative">
       <div className="absolute z-50 top-[16px] left-[16px] flex flex-row space-between items-center mb-[20px] bg-transparent">
-        <div className="flex flex-row h-[48px] w-[48px] border-[2px] border-black rounded-full items-center justify-between bg-white">
+        <div
+          className="flex flex-row h-[48px] w-[48px] border-[2px] border-black rounded-full items-center justify-between bg-white"
+          onClick={() => {
+            setShowCamera(!showCamera);
+          }}
+        >
           <img className="m-auto" src="arrow-left.svg" alt="" />
         </div>
       </div>
@@ -119,9 +127,15 @@ const Map = () => {
         <Menu />
       </div>
       <div className="absolute z-50 top-[16px] right-[80px] flex flex-row space-between items-center mb-[20px] bg-transparent">
-        <div className="flex flex-row h-[48px] w-[48px] border-[2px] border-black rounded-full items-center justify-between bg-white">
-          <img className="m-auto" src="camera.svg" alt="" />
-        </div>
+        <Link href="/cam">
+          <div
+            className={`flex flex-row h-[48px] w-[48px] border-[2px] border-black rounded-full items-center justify-between bg-white ${
+              showCamera ? "animate-pulse" : ""
+            }`}
+          >
+            <img className="m-auto" src="camera.svg" alt="" />
+          </div>
+        </Link>
       </div>
       <div className="absolute">
         <LoadScript
