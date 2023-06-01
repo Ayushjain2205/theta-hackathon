@@ -69,7 +69,7 @@ const Map = () => {
             <input
               type="text"
               placeholder=""
-              className="form-control relative m-0 block w-[304px] min-w-0 flex-auto bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none w-full"
+              className="relative m-0 block w-[304px] min-w-0 flex-auto bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none"
             />
           </StandaloneSearchBox>
           <span className="flex items-center whitespace-nowrap px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700 dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200">
