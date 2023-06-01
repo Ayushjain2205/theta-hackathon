@@ -2,6 +2,7 @@ import React from "react";
 import * as Form from "@radix-ui/react-form";
 import MapWithSearchBox from "../components/SearchMap";
 import Menu from "../components/Menu";
+import Link from "next/link";
 
 const location = () => {
   return (
@@ -28,9 +29,11 @@ const location = () => {
         </p>
 
         <Form.Submit asChild>
-          <button className="box-border w-[358px] h-[48px] inline-flex items-center justify-center rounded-[15px] bg-[#0FA958] px-[15px] leading-none focus:outline-none mt-[10px] border-black border-[2px]">
-            Next
-          </button>
+          <Link href="/appearance">
+            <button className="box-border w-[358px] h-[48px] inline-flex items-center justify-center rounded-[15px] bg-[#0FA958] px-[15px] leading-none focus:outline-none mt-[10px] border-black border-[2px]">
+              Next
+            </button>
+          </Link>
         </Form.Submit>
         <button className="box-border w-[358px] h-[48px] inline-flex items-center justify-center rounded-[15px] px-[15px] leading-none focus:outline-none mt-[10px]">
           Cancel

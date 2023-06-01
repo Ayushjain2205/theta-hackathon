@@ -20,9 +20,9 @@ const Cam = () => {
         <Link href="/celebration">
           {showImage && (
             <img
-              className="animate-spin fixed top-[250px] left-[100px] h-[202px] w-[207px]"
+              className="animate-pulse fixed top-[250px] left-[100px] h-[202px] w-[207px]"
               alt=""
-              src="/marker1.png"
+              src="/bottom.svg"
             />
           )}
         </Link>
