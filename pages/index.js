@@ -28,7 +28,7 @@ export default function Home() {
 
             <Link href="landing">
               <button className="flex flex-row gap-[8px] justify-center items-center w-[184px] h-[48px] bg-black text-white rounded-[12px]">
-                Let's go
+                Let&apos;s go
               </button>
             </Link>
           </div>
