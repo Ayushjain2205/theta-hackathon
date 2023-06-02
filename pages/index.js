@@ -21,7 +21,7 @@ export default function Home() {
           id="3"
           className="bg-[#F8D25A] flex flex-col h-screen w-screen justify-center items-center"
         >
-          <img src="loc8.svg" className="w-[190px] h-[178px]" alt="" />
+          <img src="splash.png" className="w-[190px] h-[178px]" alt="" />
           <div className="fixed bottom-[28px]">
             <p className="text-center text-[16px]">entropy labs</p>
           </div>
